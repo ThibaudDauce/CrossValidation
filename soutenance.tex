@@ -1,0 +1,249 @@
+\documentclass[handout]{beamer}
+% L'option handout permet de supprimer la barre de navigation
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+% Pour utiliser le signe €
+\usepackage{eurosym}
+% Pour pouvoir insérer des images
+\usepackage{graphicx}
+\usepackage{wrapfig}
+% Gestion des couleurs
+\usepackage{color}
+\definecolor{QTPurple}{RGB}{61, 68, 160} %3D44A0
+% Coloration syntaxique
+\usepackage{listings}
+
+% Un joli thème flat
+\usetheme{Rochester}
+
+% Personnalisation du thème
+\usecolortheme[named=QTPurple]{structure}
+\setbeamertemplate{blocks}[shadow=false]
+
+% ------------------------------------ %
+% -- METADONNÉES DU DOCUMENT --------- %
+\title[Stats]{
+	Statistiques pour l'ingénieur\\
+	Validation croisée
+}
+\author{
+	Étienne Batise - Thibaud Dauce
+}
+\date{\today}
+
+% \titlegraphic{\includegraphics[height=.3\textheight]{images/logo.png}}
+
+% Début du document
+\begin{document}
+	
+	% Génération de la page de titre
+	\begin{frame}[plain]
+		\titlepage
+	\end{frame}
+
+	% Génération du sommaire
+	\begin{frame}[plain]
+		\frametitle{Sommaire}
+		\tableofcontents
+	\end{frame}
+
+
+	% ///////////////////////////////////////////////////////// %
+	% /// Quantic Télécom c'est quoi ? /////////////////////// %
+	\section{Qu'est-ce que la validation croisée}
+
+	\subsection{L'utilité}
+		\begin{frame}
+		\frametitle{L'utilité}
+		\begin{tabular}{l l}
+			\begin{minipage}{0.2\textwidth}
+				\begin{center}
+					\includegraphics[width=0.9\textwidth]{images/cross.png}
+				\end{center}
+			\end{minipage}
+
+			\begin{minipage}{0.8\textwidth}
+				\begin{itemize}
+					\item tester les données...
+					\item ...avec peu de points
+					\item ...sans faire trop de calculs
+				\end{itemize}
+			\end{minipage}
+
+		\end{tabular}
+		\end{frame}
+
+	\subsection{Le principe}
+		\begin{frame}
+		\frametitle{Le principe}
+		\begin{tabular}{l l}
+			\begin{minipage}{0.2\textwidth}
+				\begin{center}
+					% \includegraphics[width=0.9\textwidth]{images/residence.png}
+				\end{center}
+			\end{minipage}
+
+			\begin{minipage}{0.8\textwidth}
+				\begin{itemize}
+					\item après avoir trouvé la fonction
+					\item tester sa validité
+					\item deux groupes :
+						\begin{itemize}
+							\item groupe de données
+							\item groupe de test
+						\end{itemize}
+				\end{itemize}
+			\end{minipage}
+			
+		\end{tabular}
+		\end{frame}
+
+	\subsection{3 types de validation croisée}
+		\begin{frame}
+		\frametitle{Les adhésions}
+		\begin{tabular}{l l}
+			\begin{minipage}{0.2\textwidth}
+				\begin{center}
+					% \includegraphics[width=0.9\textwidth]{images/documents.png}
+				\end{center}
+			\end{minipage}
+
+			\begin{minipage}{0.8\textwidth}
+				\begin{itemize}
+					\item accès à Internet en filaire ou Wi-Fi
+					\item adresse \textbf{IPv4 publique}, déploiement v6 en cours
+					\item respect de la \textbf{neutralité du Net}
+					\item adhésion au semestre : \textbf{8 \euro / mois}
+					\item \textit{triple play} dans les résidences CROUS : \mbox{\textbf{11 \euro / mois}}
+					\begin{itemize}
+						\footnotesize{\item TNT sur ordinateur}
+						\footnotesize{\item VoIP avec un téléphone SIP}
+					\end{itemize}
+				\end{itemize}
+			\end{minipage}
+			
+		\end{tabular}
+		\end{frame}
+
+	% //////////////////////////////////////////// %
+	% /// Le réseau actuel /////////////////////// %
+	\section{Le réseau actuel}
+
+	\subsection{Comment relier les résidences ?}
+		\begin{frame}
+		\frametitle{Comment relier les résidences ?}
+		\vspace{-5px}
+		\begin{center}
+			% \includegraphics[width=0.70\textwidth]{images/futurReseau.png}
+		\end{center}
+		
+		\end{frame}
+
+	\subsection{Fixation d'une antenne}
+		\begin{frame}
+		\frametitle{Fixation d'une antenne}
+		\vspace{-5px}
+		\begin{center}
+			\begin{figure}[h]
+				% \includegraphics[width=0.75\textwidth]{images/jossAntenne.jpg}
+				\caption{Notre président aux cheveux fous}
+			\end{figure}
+		\end{center}
+		
+		\end{frame}
+
+	\subsection{Exemple d'antennes}
+		\begin{frame}
+		\frametitle{Exemple d'antennes}
+		\begin{tabular}{l l}
+			\begin{minipage}{0.4\textwidth}
+				\begin{center}
+					% \includegraphics[width=0.95\textwidth]{images/nanobridge.jpg}
+				\end{center}
+			\end{minipage}
+
+			\begin{minipage}{0.6\textwidth}
+				\begin{itemize}
+					\item antennes point à point, unidirectionnelles
+					\item puissance d'émission inférieure à un téléphone portable (1 W)
+					\item longue portée : jusqu'à 15km sans obstacle
+					\item prix relativement correct
+				\end{itemize}
+			\end{minipage}
+			
+		\end{tabular}
+		\end{frame}
+	% ///////////////////////////////////////////////////////// %
+
+	% //////////////////////////////////////////// %
+	% /// Le sytème d'information /////////////// %
+	\section{Le sytème d'information}
+
+	\subsection{Automatiser à l'extrême}
+		\begin{frame}
+		\frametitle{Automatiser à l'extrême}
+		\begin{tabular}{l l}
+			\begin{minipage}{0.2\textwidth}
+				\begin{center}
+					% \includegraphics[width=0.9\textwidth]{images/serveur.png}
+				\end{center}
+			\end{minipage}
+
+			\begin{minipage}{0.8\textwidth}
+				\begin{itemize}
+					\item automatiser les adhésions
+					\item automatiser l'assistance (hotline, tickets, incidents, brèves)
+					\item outils de suivi : assistance et paiements
+					\item de l'adhésion à la connexion fonctionnelle dans l'appartement : \mbox{\textbf{2 minutes}}
+				\end{itemize}
+			\end{minipage}
+			
+		\end{tabular}
+		\end{frame}
+
+	\subsection{L'assistance}
+		\begin{frame}
+		\frametitle{L'assistance}
+		\begin{tabular}{l l}
+			\begin{minipage}{0.2\textwidth}
+				\begin{center}
+					% \includegraphics[width=0.9\textwidth]{images/support.png}
+				\end{center}
+			\end{minipage}
+
+			\begin{minipage}{0.8\textwidth}
+				\begin{itemize}
+					\item le plus coûteux en temps et en humain
+					\item 90 \% des problèmes ne viennent pas de nous
+					\item depuis septembre : 500 tickets / 300 appels
+					\begin{itemize}
+						\item problèmes d'infrastructure
+						\item coupures de courant
+						\item pertubations des ondes (Wi-Fi ou AirMax)
+						\item prises RJ-45 mal câblées
+					\end{itemize}
+				\end{itemize}
+			\end{minipage}
+			
+		\end{tabular}
+		\end{frame}
+
+	\subsection{Questions}
+		\begin{frame}
+		\frametitle{Questions}
+		\huge{On vous écoute :)}
+		\vspace{40px}
+		\begin{center}
+			% \includegraphics[height=.3\textheight]{images/logo.png}
+		\end{center}
+		\begin{center}
+			\small{\underline{www.quantic-telecom.net}}
+		\end{center}
+		\end{frame}
+
+	% ///////////////////////////////////////////////////////// %
+
+% Fin du document
+\end{document}
