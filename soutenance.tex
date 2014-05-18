@@ -89,9 +89,9 @@
 				\begin{itemize}
 					\item après avoir trouvé la fonction
 					\item tester sa validité
-					\item deux groupes :
+					\item deux groupes de données :
 						\begin{itemize}
-							\item groupe de données
+							\item groupe d'apprentissage
 							\item groupe de test
 						\end{itemize}
 				\end{itemize}
@@ -115,8 +115,81 @@
 					\item Rapport données / temps de calcul 
 					\begin{itemize}
 						\item testset validation
-						\item k-fold cross-validation
 						\item leave-one-out cross-validation
+						\item k-fold cross-validation
+					\end{itemize}
+				\end{itemize}
+			\end{minipage}
+
+		\end{tabular}
+		\end{frame}
+
+		\begin{frame}
+		\frametitle{testset validation}
+		\begin{tabular}{l l}
+			\begin{minipage}{0.5\textwidth}
+				\begin{center}
+					\includegraphics[width=0.9\textwidth]{images/testset.png}
+				\end{center}
+			\end{minipage}
+
+			\begin{minipage}{0.5\textwidth}
+				\begin{itemize}
+					\item choisir 30\% des données pour le test
+					\item Résultats :
+					\begin{itemize}
+						\item très facile à mettre en place
+						\item perte de 30\% de l'échantillon
+						\item peu précis en cas de petit échantillon
+					\end{itemize}
+				\end{itemize}
+			\end{minipage}
+
+		\end{tabular}
+		\end{frame}
+
+		\begin{frame}
+		\frametitle{leave-one-out cross-validation}
+		\begin{tabular}{l l}
+			\begin{minipage}{0.5\textwidth}
+				\begin{center}
+					\includegraphics[width=0.9\textwidth]{images/leave-one-out.png}
+				\end{center}
+			\end{minipage}
+
+			\begin{minipage}{0.5\textwidth}
+				\begin{itemize}
+					\item choisir 1 donnée pour le test
+					\item recommencer pour chaque donnée
+					\item faire la moyenne des erreurs
+					\item Résultats :
+					\begin{itemize}
+						\item aucune perte de données
+						\item très couteux en temps
+					\end{itemize}
+				\end{itemize}
+			\end{minipage}
+
+		\end{tabular}
+		\end{frame}
+
+		\begin{frame}
+		\frametitle{k-fold cross-validation}
+		\begin{tabular}{l l}
+			\begin{minipage}{0.5\textwidth}
+				\begin{center}
+					\includegraphics[width=0.9\textwidth]{images/k-fold.png}
+				\end{center}
+			\end{minipage}
+
+			\begin{minipage}{0.5\textwidth}
+				\begin{itemize}
+					\item découper les données en k parties
+					\item Résultats :
+					\begin{itemize}
+						\item perte de données relative à k
+						\item complexité relative à k
+						\item si k = 1, équivalent à un leave-one-out
 					\end{itemize}
 				\end{itemize}
 			\end{minipage}
@@ -130,7 +203,7 @@
 
 	\subsection{Présentation du code Octave}
 		\begin{frame}
-		\frametitle{Présentation}
+		\frametitle{Présentation du code Octave}
 		\begin{tabular}{l l}
 			\begin{minipage}{0.4\textwidth}
 				\begin{center}
@@ -150,25 +223,25 @@
 		\end{frame}
 
 	% //////////////////////////////////////////// %
-	% /// Le sytème d'information /////////////// %
-	\section{Le sytème d'information}
+	% /// Et maintenant, dans l'informatique ///// %
+	\section{Et maintenant, dans l'informatique}
 
-	\subsection{Automatiser à l'extrême}
+	\subsection{Exemple des réseaux de neurones}
 		\begin{frame}
-		\frametitle{Automatiser à l'extrême}
+		\frametitle{Exemple des réseaux de neurones}
 		\begin{tabular}{l l}
-			\begin{minipage}{0.2\textwidth}
+			\begin{minipage}{0.4\textwidth}
 				\begin{center}
-					% \includegraphics[width=0.9\textwidth]{images/serveur.png}
+					\includegraphics[width=0.9\textwidth]{images/neural_networking.jpg}
 				\end{center}
 			\end{minipage}
 
-			\begin{minipage}{0.8\textwidth}
+			\begin{minipage}{0.6\textwidth}
 				\begin{itemize}
-					\item automatiser les adhésions
-					\item automatiser l'assistance (hotline, tickets, incidents, brèves)
-					\item outils de suivi : assistance et paiements
-					\item de l'adhésion à la connexion fonctionnelle dans l'appartement : \mbox{\textbf{2 minutes}}
+					\item modèle de calcul basé sur les neurones biologiques
+					\item une ou plusieurs entrées, une sortie
+					\item fonctionne en couche
+					\item permet de résoudre des problèmes statistiques
 				\end{itemize}
 			\end{minipage}
 			
