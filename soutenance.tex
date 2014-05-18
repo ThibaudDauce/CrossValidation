@@ -12,8 +12,8 @@
 % Gestion des couleurs
 \usepackage{color}
 \definecolor{QTPurple}{RGB}{61, 68, 160} %3D44A0
-% Coloration syntaxique
-\usepackage{listings}
+
+\usepackage{hyperref}
 
 % Un joli thème flat
 \usetheme{Rochester}
@@ -198,37 +198,36 @@
 		\end{frame}
 
 	% //////////////////////////////////////////// %
-	% /// Démonstration ////////////////////////// %
-	\section{Démonstration}
+	% /// Démonstration Octave /////////////////// %
+	\section{Démonstration Octave}
 
-	\subsection{Présentation du code Octave}
-		\begin{frame}
-		\frametitle{Présentation du code Octave}
-		\begin{tabular}{l l}
-			\begin{minipage}{0.4\textwidth}
-				\begin{center}
-					\includegraphics[width=0.9\textwidth]{images/octave.png}
-				\end{center}
-			\end{minipage}
+	\begin{frame}
+	\frametitle{Présentation du code}
+	\begin{tabular}{l l}
+		\begin{minipage}{0.4\textwidth}
+			\begin{center}
+				\includegraphics[width=0.9\textwidth]{images/octave.png}
+			\end{center}
+		\end{minipage}
 
-			\begin{minipage}{0.6\textwidth}
-				\begin{itemize}
-					\item génération de points aléatoires 
-					\item calcul de la fonction par 3 méthodes 
-					\item calcul de la validation croisée
-				\end{itemize}
-			\end{minipage}
+		\begin{minipage}{0.6\textwidth}
+			\begin{itemize}
+				\item génération de points aléatoires 
+				\item calcul de la fonction par 3 méthodes 
+				\item calcul de la validation croisée
+			\end{itemize}
+		\end{minipage}
 
-		\end{tabular}
-		\end{frame}
+	\end{tabular}
+	\end{frame}
 
 	% //////////////////////////////////////////// %
 	% /// Et maintenant, dans l'informatique ///// %
 	\section{Et maintenant, dans l'informatique}
 
-	\subsection{Exemple des réseaux de neurones}
+	\subsection{Exemple des réseaux de neurones 1/2}
 		\begin{frame}
-		\frametitle{Exemple des réseaux de neurones}
+		\frametitle{Exemple des réseaux de neurones 1/2}
 		\begin{tabular}{l l}
 			\begin{minipage}{0.4\textwidth}
 				\begin{center}
@@ -242,33 +241,32 @@
 					\item une ou plusieurs entrées, une sortie
 					\item fonctionne en couche
 					\item permet de résoudre des problèmes statistiques
+					\item basé sur l'apprentissage
 				\end{itemize}
 			\end{minipage}
 			
 		\end{tabular}
 		\end{frame}
 
-	\subsection{L'assistance}
+	\subsection{Exemple des réseaux de neurones 2/2}
 		\begin{frame}
-		\frametitle{L'assistance}
+		\frametitle{Exemple des réseaux de neurones 2/2}
 		\begin{tabular}{l l}
 			\begin{minipage}{0.2\textwidth}
 				\begin{center}
-					% \includegraphics[width=0.9\textwidth]{images/support.png}
+					\includegraphics[width=0.9\textwidth]{images/ajust.png}
 				\end{center}
 			\end{minipage}
 
 			\begin{minipage}{0.8\textwidth}
 				\begin{itemize}
-					\item le plus coûteux en temps et en humain
-					\item 90 \% des problèmes ne viennent pas de nous
-					\item depuis septembre : 500 tickets / 300 appels
+					\item tester son réseau de neurones
+					\item ajuster l'apprentissage
 					\begin{itemize}
-						\item problèmes d'infrastructure
-						\item coupures de courant
-						\item pertubations des ondes (Wi-Fi ou AirMax)
-						\item prises RJ-45 mal câblées
+						\item nombre de noeuds
+						\item paramètres d'apprentissage
 					\end{itemize}
+					\item pour en savoir plus : cours "Machine Learning" sur Coursera
 				\end{itemize}
 			\end{minipage}
 			
@@ -278,14 +276,18 @@
 	\subsection{Questions}
 		\begin{frame}
 		\frametitle{Questions}
-		\huge{On vous écoute :)}
+		On vous écoute :)
 		\vspace{40px}
-		\begin{center}
-			% \includegraphics[height=.3\textheight]{images/logo.png}
-		\end{center}
-		\begin{center}
-			\small{\underline{www.quantic-telecom.net}}
-		\end{center}
+		\tiny{
+			\begin{itemize}
+				\item \url{http://www.autonlab.org/tutorials/overfit10.pdf}
+				\item \url{https://fr.wikipedia.org/wiki/Réseaux\_de\_neurones}
+				\item \url{https://jamesmccaffrey.wordpress.com/2013/10/25/k-fold-cross-validation-for-neural-networks}
+				\item \url{http://visualstudiomagazine.com/articles/2013/10/01/understanding-and-using-kfold.aspx}
+				\item \url{https://fr.wikipedia.org/wiki/Validation\_croisée}
+				\item \url{https://www.coursera.org/course/ml}
+			\end{itemize}
+		}
 		\end{frame}
 
 	% ///////////////////////////////////////////////////////// %
